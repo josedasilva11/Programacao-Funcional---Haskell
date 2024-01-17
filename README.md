@@ -52,22 +52,22 @@ Em Haskell, uma lista é uma sequência de elementos do mesmo tipo. Imagina uma 
 
 ## Operações com Listas:
 
-- ***head***:
+### - ***head***:
 - Esta função pega no primeiro elemento da lista.
 
 ***Exemplo: head [1, 2, 3]*** resulta em 1, porque 1 é o primeiro elemento da lista ***[1, 2, 3]***.
 
-- ***tail***:
+### - ***tail***:
 - Esta função pega em tudo exceto no primeiro elemento da lista.
 
 ***Exemplo: tail [1, 2, 3]*** resulta em ***[2, 3]***, que são todos os elementos da lista exceto o primeiro.
 
-- ***length***:
+### - ***length***:
 - Esta função conta quantos elementos existem na lista.
 
 ***Exemplo: length [1, 2, 3]*** resulta em 3, porque há três elementos na lista ***[1, 2, 3]***.
 
-- ***reverse***:
+### - ***reverse***:
 - Esta função inverte a ordem dos elementos da lista.
 
 ***Exemplo: reverse [1, 2, 3]*** resulta em ***[3, 2, 1]***, que é a lista ***[1, 2, 3]*** com a ordem dos elementos invertida.
@@ -97,50 +97,50 @@ Aqui, Shape é um novo tipo de dado que criaste. Ele pode ser um Circle (Círcul
 ## Tipos Básicos
 Resumindo assim os tipos:
 
-- ***Int***:
+### - ***Int***:
 
 É um número inteiro, como 5, -3, ou 42.
 Tem um tamanho fixo, o que significa que ele tem um limite para quão grande ou pequeno pode ser.
 
-- ***Integer***:
+### - ***Integer***:
 
 Também é um número inteiro, mas pode ser tão grande quanto precisares.
 Útil para cálculos com números muito grandes, como em criptografia.
 
-- ***Float***:
+### - ***Float***:
 
 Representa números com casas decimais, como 3.14 ou -0.01.
 Tem precisão simples, o que é suficiente para muitos cálculos, mas não todos.
 
-- ***Double***:
+### - ***Double***:
 
 Similar ao Float, mas com o dobro da precisão.
 Melhor para cálculos científicos ou quando precisas de mais precisão.
 
-- ***Bool***:
+### - ***Bool***:
 
 Só pode ser True ou False.
 Usado para lógica e condições, como em testes se algo é verdadeiro ou falso.
 
-- ***Char***:
+### - ***Char***:
 
 Representa um único caractere, como 'a', 'z', ou '9'.
 Usado para construir textos ou trabalhar com caracteres individuais.
 
-- ***String***:
+### - ***String***:
 
 Uma sequência de caracteres.
 Basicamente, é como uma palavra ou frase, como "Olá" ou "Haskell é fixe".
 
 ## Tipos Compostos
 
-- ***Listas***:
+### - ***Listas***:
 
 Uma coleção de elementos do mesmo tipo.
 
 Exemplo: [1, 2, 3] é uma lista de números inteiros.
 
-- ***Tuplas***:
+### - ***Tuplas***:
 
 Coleção de elementos de diferentes tipos.
 
@@ -148,7 +148,7 @@ Exemplo: (1, "Hello", True) é uma tupla que contém um número, uma palavra e u
 
 ## Tipos de Dados Personalizados
 
-- ***Tipos Algébricos de Dados (ADTs):***
+### - ***Tipos Algébricos de Dados (ADTs):***
   
 Crias os teus próprios tipos.
 
@@ -157,7 +157,7 @@ Exemplo: data Color = Red | Green | Blue define um tipo Color que pode ser Red, 
 
 ## Tipos de Função
 
-- ***Funções:***
+### - ***Funções:***
   
 As funções em Haskell também são um tipo.
 
@@ -165,13 +165,13 @@ Exemplo: Uma função que soma dois números (soma x y = x + y) tem tipo Int -> 
 
 ## Tipos Especiais
 
-- ***Maybe:***
+### - ***Maybe:***
 
 Representa um valor que pode existir ou não.
 
 Exemplo: Maybe Int pode ser Just 5 (existe um número) ou Nothing (não existe número).
 
-- ***Either:***
+### - ***Either:***
 
 Representa um valor que pode ser de um de dois tipos.
 
@@ -179,14 +179,14 @@ Exemplo: Either String Int pode ser Left "erro" (um erro com uma mensagem) ou Ri
 
 ## Tipos Parametrizados e Polimórficos
 
-- ***Tipos Parametrizados:***
+### - ***Tipos Parametrizados:***
   
 São tipos que funcionam com vários outros tipos.
 Exemplo: A lista [a] pode ser uma lista de qualquer coisa (a é o parâmetro que pode ser qualquer tipo).
 
 ## Tipos de Restrição de Classe
 
-- ***Restrições de Classe:***
+### - ***Restrições de Classe:***
   
 Algumas funções só funcionam com tipos que têm certas propriedades.
 
@@ -194,7 +194,7 @@ Exemplo: Para comparar dois valores com ==, eles precisam ser do tipo Eq.
 
 ## Tipos de Função de Ordem Superior
 
-- ***Funções de Ordem Superior:***
+### - ***Funções de Ordem Superior:***
   
 São funções que podem receber outras funções como argumentos ou retornar outras funções.
 
@@ -258,7 +258,8 @@ filterEven nums = filter even nums
 ***Explicação:*** even é uma função que verifica se um número é par. filter usa even para testar cada elemento em nums e mantém só os pares.
 
 # Funções de Biblioteca Padrão
- - ***map:***
+
+###  - ***map:***
 
 ***O que faz:*** Aplica uma função a cada elemento de uma lista.
 ***Exemplo:*** Dobrar cada número numa lista.
@@ -268,7 +269,7 @@ map (*2) [1, 2, 3] -- Resulta em [2, 4, 6]
 ```
 ***Como funciona:*** (*2) é uma função que multiplica um número por 2. map aplica essa função a cada número na lista [1, 2, 3].
 
-- ***filter:***
+### - ***filter:***
 
 ***O que faz:*** Escolhe elementos de uma lista que atendem a uma condição.
 ***Exemplo:*** Manter apenas números ímpares de uma lista.
@@ -277,7 +278,7 @@ filter odd [1, 2, 3, 4] -- Resulta em [1, 3]
 ```
 ***Como funciona:*** odd é uma função que verifica se um número é ímpar. filter usa odd para testar cada elemento em [1, 2, 3, 4].
 
-- ***foldr (fold right):***
+### - ***foldr (fold right):***
 
 ***O que faz:*** Combina elementos de uma lista da direita para a esquerda usando uma função.
 ***Exemplo:*** Somar os elementos de uma lista.
@@ -286,7 +287,7 @@ foldr (+) 0 [1, 2, 3] -- Resulta em 6
 ```
 ***Como funciona:*** Começa com 0 e combina cada elemento da lista usando + (soma).
 
--*** foldl (fold left):***
+### -***foldl (fold left):***
 
 ***O que faz:*** Semelhante a foldr, mas combina os elementos da esquerda para a direita.
 ***Exemplo:*** Subtrair os elementos de uma lista, começando do zero.
@@ -297,7 +298,7 @@ foldl (-) 0 [1, 2, 3] -- Resulta em -6
 
 ## Operações de Lista Avançadas
 
-- ***Compreensões de Lista:***
+### - ***Compreensões de Lista:***
 
 ***O que faz:*** Cria listas com base noutras listas, usando condições e transformações.
 ***Exemplo:*** Lista dos quadrados dos números pares.
@@ -306,7 +307,7 @@ foldl (-) 0 [1, 2, 3] -- Resulta em -6
 ```
 ***Como funciona:*** Para cada número x de 1 a 10, se x for par, coloca x^2 (x ao quadrado) na nova lista.
 
-- ***Concatenação de Listas:***
+### - ***Concatenação de Listas:***
 
 ***O que faz:*** Une duas listas numa.
 ***Exemplo:*** Juntar duas listas.
@@ -315,7 +316,7 @@ foldl (-) 0 [1, 2, 3] -- Resulta em -6
 ```
 ***Como funciona:*** ++ é o operador que junta duas listas.
 
-- ***zip:***
+### - ***zip:***
 
 ***O que faz:*** Cria uma lista de tuplas combinando elementos de duas listas.
 ***Exemplo:*** Emparelhar elementos de duas listas.
@@ -324,7 +325,7 @@ zip [1, 2, 3] ["one", "two", "three"] -- Resulta em [(1, "one"), (2, "two"), (3,
 ```
 ***Como funciona:*** zip pega o primeiro elemento de cada lista e faz uma tupla, depois o segundo de cada lista, e assim por diante.
 
--*** unzip:***
+### -***unzip:***
 
 ***O que faz:*** Separa uma lista de tuplas em duas listas.
 ***Exemplo:*** Separar uma lista de tuplas.
@@ -335,7 +336,7 @@ unzip [(1, "one"), (2, "two"), (3, "three")] -- Resulta em ([1, 2, 3], ["one", "
 
 # Funções Totais vs. Parciais
 
- -*** Funções Totais***
+###  -***Funções Totais***
    
 ***O que são:*** São funções que têm uma resposta para qualquer entrada que lhes deres. Elas nunca "falham" ou causam erros por causa da entrada.
 
@@ -346,7 +347,7 @@ dobrar x = 2 * x
 Esta função dobrar pega `num número (x) e devolve o dobro.
 Não importa qual número lhe dês, ela sempre vai dar-te uma resposta.
 
-- ***Funções Parciais***
+### - ***Funções Parciais***
   
 ***O que são:*** São funções que podem não funcionar para algumas entradas. Para certos valores, elas podem falhar ou causar um erro.
 
@@ -358,7 +359,7 @@ Funciona bem com listas que têm pelo menos um elemento (head [1, 2, 3] dá 1), 
 
 # Tratamento de Erros
 
- - ***Maybe***
+###  - ***Maybe***
    
 ***O que é:*** Maybe é um tipo especial em Haskell que é usado para funções que podem não ter uma resposta para certas entradas.
 ***Como funciona:*** Maybe pode ser Just something (significa que tem uma resposta) ou Nothing (significa que não tem resposta).
@@ -370,7 +371,7 @@ safeHead (x:_) = Just x
 safeHead é como head, mas ao invés de falhar com listas vazias, retorna Nothing.
 Com uma lista normal, retorna Just seguido do primeiro elemento.
 
-- ***Either***
+### - ***Either***
 
 ***O que é:*** Either é usado para funções que podem ter dois tipos diferentes de resultados. Geralmente um para sucesso e outro para erro.
 ***Como funciona:*** Either pode ser Left algumaCoisa (geralmente um erro) ou Right algumaCoisa (um resultado bem-sucedido).
