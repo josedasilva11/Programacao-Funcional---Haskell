@@ -197,7 +197,7 @@ Recursão de cauda é uma forma especial de escrever funções recursivas (funç
 
 Como Funciona: Ao invés de fazer mais coisas após a chamada recursiva, a função termina com essa chamada. Isso economiza memória.
 
-Exemplo:
+***Exemplo***:
 Fatorial com Recursão de Cauda:
 
 ```haskell
@@ -207,7 +207,7 @@ factorial n = aux n 1
         aux n acc = aux (n - 1) (n * acc)
 ```
      
-Explicação:
+***Explicação***:
 
 factorial n começa a operação.
 aux é uma função interna (dentro de factorial) que faz o trabalho real.
@@ -221,31 +221,105 @@ Quando n chega a 0, acc é o resultado final.
 
 Funções de ordem superior são funções que podem receber outras funções como argumentos ou retornar outras funções como resultados. Elas são muito poderosas e flexíveis.
 
-Exemplos:
+***Exemplos:***
 - Usando map:
 
 O que Faz: map aplica uma função a cada elemento de uma lista.
-Exemplo: Dobrar os números em uma lista.
+***Exemplo:*** Dobrar os números em uma lista.
 
 ```haskell
 doubleNumbers :: [Int] -> [Int]
 doubleNumbers nums = map (*2) nums
 ```
-Explicação: (*2) é uma função que multiplica um número por 2. map aplica (*2) a cada elemento em nums.
+***Explicação:*** (*2) é uma função que multiplica um número por 2. map aplica (*2) a cada elemento em nums.
 
 - Usando filter:
 
 O que Faz: filter escolhe elementos de uma lista que satisfazem uma condição.
 
-Exemplo: Selecionar números pares de uma lista.
+***Exemplo:*** Selecionar números pares de uma lista.
   
 ```haskell
 filterEven :: [Int] -> [Int]
 filterEven nums = filter even nums
 ```
-Explicação: even é uma função que verifica se um número é par. filter usa even para testar cada elemento em nums e mantém só os pares.
+***Explicação:*** even é uma função que verifica se um número é par. filter usa even para testar cada elemento em nums e mantém só os pares.
 
+# Funções de Biblioteca Padrão
+ - map:
 
+***O que faz:*** Aplica uma função a cada elemento de uma lista.
+***Exemplo:*** Dobrar cada número numa lista.
+
+```haskell
+map (*2) [1, 2, 3] -- Resulta em [2, 4, 6]
+```
+***Como funciona:*** (*2) é uma função que multiplica um número por 2. map aplica essa função a cada número na lista [1, 2, 3].
+
+- filter:
+
+***O que faz:*** Escolhe elementos de uma lista que atendem a uma condição.
+***Exemplo:*** Manter apenas números ímpares de uma lista.
+```haskell
+filter odd [1, 2, 3, 4] -- Resulta em [1, 3]
+```
+***Como funciona:*** odd é uma função que verifica se um número é ímpar. filter usa odd para testar cada elemento em [1, 2, 3, 4].
+
+- foldr (fold right):
+
+***O que faz:*** Combina elementos de uma lista da direita para a esquerda usando uma função.
+***Exemplo:*** Somar os elementos de uma lista.
+```haskell
+foldr (+) 0 [1, 2, 3] -- Resulta em 6
+```
+***Como funciona:*** Começa com 0 e combina cada elemento da lista usando + (soma).
+
+- foldl (fold left):
+
+***O que faz:*** Semelhante a foldr, mas combina os elementos da esquerda para a direita.
+***Exemplo:*** Subtrair os elementos de uma lista, começando do zero.
+```haskell
+foldl (-) 0 [1, 2, 3] -- Resulta em -6
+```
+***Como funciona:*** Começa com 0 e subtrai cada elemento da lista da esquerda para a direita.
+
+## Operações de Lista Avançadas
+
+- Compreensões de Lista:
+
+***O que faz:*** Cria listas com base noutras listas, usando condições e transformações.
+***Exemplo:*** Lista dos quadrados dos números pares.
+```haskell
+[x^2 | x <- [1..10], even x] -- Resulta em [4, 16, 36, 64, 100]
+```
+***Como funciona:*** Para cada número x de 1 a 10, se x for par, coloca x^2 (x ao quadrado) na nova lista.
+
+- Concatenação de Listas:
+
+***O que faz:*** Une duas listas numa.
+***Exemplo:*** Juntar duas listas.
+```haskell
+[1, 2, 3] ++ [4, 5, 6] -- Resulta em [1, 2, 3, 4, 5, 6]
+```
+***Como funciona:*** ++ é o operador que junta duas listas.
+
+- zip:
+
+***O que faz:*** Cria uma lista de tuplas combinando elementos de duas listas.
+***Exemplo:*** Emparelhar elementos de duas listas.
+```haskell
+zip [1, 2, 3] ["one", "two", "three"] -- Resulta em [(1, "one"), (2, "two"), (3, "three")]
+```
+***Como funciona:*** zip pega o primeiro elemento de cada lista e faz uma tupla, depois o segundo de cada lista, e assim por diante.
+
+- unzip:
+
+***O que faz:*** Separa uma lista de tuplas em duas listas.
+***Exemplo:*** Separar uma lista de tuplas.
+```haskell
+unzip [(1, "one"), (2, "two"), (3, "three")] -- Resulta em ([1, 2, 3], ["one", "two", "three"])
+```
+***Como funciona:*** unzip pega cada tupla, coloca o primeiro elemento na primeira lista e o segundo na segunda.
 
 
 
