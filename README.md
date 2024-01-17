@@ -76,6 +76,7 @@ Uma tupla é como uma caixa que pode conter uma combinação de diferentes tipos
 ***Exemplo de Tupla: (1, "Hello").*** Esta tupla contém dois elementos: um número (1) e um texto ("Hello").
 
 ## Tipos de Dados Personalizados
+
 Podes criar tipos de dados que se ajustem especificamente ao que precisas no teu programa. É como se estivesses a inventar um novo tipo de caixa para organizar as tuas coisas da maneira que quiseres.
 
 Exemplo:
@@ -141,7 +142,8 @@ Exemplo: (1, "Hello", True) é uma tupla que contém um número, uma palavra e u
 
 ## Tipos de Dados Personalizados
 
-- ***Tipos Algébricos de Dados (ADTs):***
+***Tipos Algébricos de Dados (ADTs):***
+  
 - Crias os teus próprios tipos.
 Exemplo: data Color = Red | Green | Blue define um tipo Color que pode ser Red, Green, ou Blue.
 
@@ -149,6 +151,7 @@ Exemplo: data Color = Red | Green | Blue define um tipo Color que pode ser Red, 
 ## Tipos de Função
 
 - ***Funções:***
+  
 As funções em Haskell também são um tipo.
 Exemplo: Uma função que soma dois números (soma x y = x + y) tem tipo Int -> Int -> Int.
 
@@ -167,16 +170,21 @@ Exemplo: Either String Int pode ser Left "erro" (um erro com uma mensagem) ou Ri
 ## Tipos Parametrizados e Polimórficos
 
 - ***Tipos Parametrizados:***
+  
 São tipos que funcionam com vários outros tipos.
 Exemplo: A lista [a] pode ser uma lista de qualquer coisa (a é o parâmetro que pode ser qualquer tipo).
 
 ## Tipos de Restrição de Classe
+
 - ***Restrições de Classe:***
+  
 Algumas funções só funcionam com tipos que têm certas propriedades.
 Exemplo: Para comparar dois valores com ==, eles precisam ser do tipo Eq.
 
 ## Tipos de Função de Ordem Superior
+
 - ***Funções de Ordem Superior:***
+  
 São funções que podem receber outras funções como argumentos ou retornar outras funções.
 Exemplo: map é uma função que recebe uma função e uma lista, e aplica essa função a cada elemento da lista.
 
