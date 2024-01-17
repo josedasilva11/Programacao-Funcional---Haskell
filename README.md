@@ -189,7 +189,61 @@ São funções que podem receber outras funções como argumentos ou retornar ou
 Exemplo: map é uma função que recebe uma função e uma lista, e aplica essa função a cada elemento da lista.
 
 
+# Padrões de Recursão
 
+## Recursão de Cauda (Tail Recursion)
+
+Recursão de cauda é uma forma especial de escrever funções recursivas (funções que se chamam a si mesmas) para serem mais eficientes.
+
+Como Funciona: Ao invés de fazer mais coisas após a chamada recursiva, a função termina com essa chamada. Isso economiza memória.
+
+Exemplo:
+Fatorial com Recursão de Cauda:
+
+```haskell
+factorial :: Int -> Int
+factorial n = aux n 1
+  where aux 0 acc = acc
+        aux n acc = aux (n - 1) (n * acc)
+```
+     
+Explicação:
+
+factorial n começa a operação.
+aux é uma função interna (dentro de factorial) que faz o trabalho real.
+acc é um acumulador que guarda o resultado até agora.
+
+Cada vez que aux se chama, ela atualiza acc e diminui n por 1.
+Quando n chega a 0, acc é o resultado final.
+
+
+## Funções de Ordem Superior
+
+Funções de ordem superior são funções que podem receber outras funções como argumentos ou retornar outras funções como resultados. Elas são muito poderosas e flexíveis.
+
+Exemplos:
+- Usando map:
+
+O que Faz: map aplica uma função a cada elemento de uma lista.
+Exemplo: Dobrar os números em uma lista.
+
+```haskell
+doubleNumbers :: [Int] -> [Int]
+doubleNumbers nums = map (*2) nums
+```
+Explicação: (*2) é uma função que multiplica um número por 2. map aplica (*2) a cada elemento em nums.
+
+- Usando filter:
+
+O que Faz: filter escolhe elementos de uma lista que satisfazem uma condição.
+
+Exemplo: Selecionar números pares de uma lista.
+  
+```haskell
+filterEven :: [Int] -> [Int]
+filterEven nums = filter even nums
+```
+Explicação: even é uma função que verifica se um número é par. filter usa even para testar cada elemento em nums e mantém só os pares.
 
 
 
