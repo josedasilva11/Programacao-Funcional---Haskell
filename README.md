@@ -11,10 +11,10 @@ Aqui, soma é o nome da função. a e b são os parâmetros (valores que passas 
 ## Tipos de Dados em Haskell
 Haskell é muito específico com os tipos de dados:
 
-- Int: Para números inteiros. Exemplo: 5, -3, 42.
-- Float: Para números decimais. Exemplo: 3.14, -0.001.
-- Char: Para caracteres individuais. Exemplo: 'a', 'z', '2'.
-- String: Para textos ou sequências de caracteres. Exemplo: "Olá, mundo".
+- **Int**: Para números inteiros. Exemplo: 5, -3, 42.
+- **Float**: Para números decimais. Exemplo: 3.14, -0.001.
+- **Char**: Para caracteres individuais. Exemplo: 'a', 'z', '2'.
+- **String**: Para textos ou sequências de caracteres. Exemplo: "Olá, mundo".
   
 ## Construtores de Tipo
 
