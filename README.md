@@ -1,3 +1,25 @@
+# Sumário
+
+- [Sintaxe Básica de Haskell](#sintaxe-básica-de-haskell)
+- [Tipos de Dados em Haskell](#tipos-de-dados-em-haskell)
+  - [Construtores de Tipo](#construtores-de-tipo)
+  - [Recursão](#recursão)
+  - [Funções Puras vs. Impuras](#funções-puras-vs-impuras)
+- [Listas](#listas)
+  - [Operações com Listas](#operações-com-listas)
+- [Tuplas](#tuplas)
+- [Tipos de Dados Personalizados](#tipos-de-dados-personalizados)
+- [Tipos Básicos](#tipos-básicos)
+- [Tipos Compostos](#tipos-compostos)
+- [Funções de Ordem Superior](#funções-de-ordem-superior)
+- [Funções de Biblioteca Padrão](#funções-de-biblioteca-padrão)
+- [Operações de Lista Avançadas](#operações-de-lista-avançadas)
+- [Funções Totais vs. Parciais](#funções-totais-vs-parciais)
+- [Tratamento de Erros](#tratamento-de-erros)
+  - [Maybe](#maybe)
+  - [Either](#either)
+
+
 # Sintaxe Básica de Haskell
 Imagine que Haskell é uma linguagem onde dás instruções ao computador de maneira diferente do que estás acostumado noutras linguagens como Python ou Java.
 
