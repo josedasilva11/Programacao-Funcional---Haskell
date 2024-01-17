@@ -133,18 +133,21 @@ Basicamente, é como uma palavra ou frase, como "Olá" ou "Haskell é fixe".
 - ***Listas***:
 
 Uma coleção de elementos do mesmo tipo.
+
 Exemplo: [1, 2, 3] é uma lista de números inteiros.
 
 - ***Tuplas***:
 
 Coleção de elementos de diferentes tipos.
+
 Exemplo: (1, "Hello", True) é uma tupla que contém um número, uma palavra e um valor booleano.
 
 ## Tipos de Dados Personalizados
 
-***Tipos Algébricos de Dados (ADTs):***
+- ***Tipos Algébricos de Dados (ADTs):***
   
-- Crias os teus próprios tipos.
+Crias os teus próprios tipos.
+
 Exemplo: data Color = Red | Green | Blue define um tipo Color que pode ser Red, Green, ou Blue.
 
 
@@ -153,6 +156,7 @@ Exemplo: data Color = Red | Green | Blue define um tipo Color que pode ser Red, 
 - ***Funções:***
   
 As funções em Haskell também são um tipo.
+
 Exemplo: Uma função que soma dois números (soma x y = x + y) tem tipo Int -> Int -> Int.
 
 ## Tipos Especiais
@@ -160,11 +164,13 @@ Exemplo: Uma função que soma dois números (soma x y = x + y) tem tipo Int -> 
 - ***Maybe:***
 
 Representa um valor que pode existir ou não.
+
 Exemplo: Maybe Int pode ser Just 5 (existe um número) ou Nothing (não existe número).
 
 - ***Either:***
 
 Representa um valor que pode ser de um de dois tipos.
+
 Exemplo: Either String Int pode ser Left "erro" (um erro com uma mensagem) ou Right 42 (um número inteiro válido).
 
 ## Tipos Parametrizados e Polimórficos
@@ -179,6 +185,7 @@ Exemplo: A lista [a] pode ser uma lista de qualquer coisa (a é o parâmetro que
 - ***Restrições de Classe:***
   
 Algumas funções só funcionam com tipos que têm certas propriedades.
+
 Exemplo: Para comparar dois valores com ==, eles precisam ser do tipo Eq.
 
 ## Tipos de Função de Ordem Superior
@@ -186,6 +193,7 @@ Exemplo: Para comparar dois valores com ==, eles precisam ser do tipo Eq.
 - ***Funções de Ordem Superior:***
   
 São funções que podem receber outras funções como argumentos ou retornar outras funções.
+
 Exemplo: map é uma função que recebe uma função e uma lista, e aplica essa função a cada elemento da lista.
 
 
@@ -195,7 +203,7 @@ Exemplo: map é uma função que recebe uma função e uma lista, e aplica essa 
 
 Recursão de cauda é uma forma especial de escrever funções recursivas (funções que se chamam a si mesmas) para serem mais eficientes.
 
-Como Funciona: Ao invés de fazer mais coisas após a chamada recursiva, a função termina com essa chamada. Isso economiza memória.
+***Como Funciona:*** Ao invés de fazer mais coisas após a chamada recursiva, a função termina com essa chamada. Isso economiza memória.
 
 ***Exemplo***:
 Fatorial com Recursão de Cauda:
@@ -222,9 +230,9 @@ Quando n chega a 0, acc é o resultado final.
 Funções de ordem superior são funções que podem receber outras funções como argumentos ou retornar outras funções como resultados. Elas são muito poderosas e flexíveis.
 
 ***Exemplos:***
-- Usando map:
+- ***Usando map:***
 
-O que Faz: map aplica uma função a cada elemento de uma lista.
+***O que Faz:*** map aplica uma função a cada elemento de uma lista.
 ***Exemplo:*** Dobrar os números em uma lista.
 
 ```haskell
@@ -233,9 +241,9 @@ doubleNumbers nums = map (*2) nums
 ```
 ***Explicação:*** (*2) é uma função que multiplica um número por 2. map aplica (*2) a cada elemento em nums.
 
-- Usando filter:
+- ***Usando filter:***
 
-O que Faz: filter escolhe elementos de uma lista que satisfazem uma condição.
+***O que Faz:*** filter escolhe elementos de uma lista que satisfazem uma condição.
 
 ***Exemplo:*** Selecionar números pares de uma lista.
   
@@ -246,7 +254,7 @@ filterEven nums = filter even nums
 ***Explicação:*** even é uma função que verifica se um número é par. filter usa even para testar cada elemento em nums e mantém só os pares.
 
 # Funções de Biblioteca Padrão
- - map:
+ - ***map:***
 
 ***O que faz:*** Aplica uma função a cada elemento de uma lista.
 ***Exemplo:*** Dobrar cada número numa lista.
@@ -256,7 +264,7 @@ map (*2) [1, 2, 3] -- Resulta em [2, 4, 6]
 ```
 ***Como funciona:*** (*2) é uma função que multiplica um número por 2. map aplica essa função a cada número na lista [1, 2, 3].
 
-- filter:
+- ***filter:***
 
 ***O que faz:*** Escolhe elementos de uma lista que atendem a uma condição.
 ***Exemplo:*** Manter apenas números ímpares de uma lista.
@@ -265,7 +273,7 @@ filter odd [1, 2, 3, 4] -- Resulta em [1, 3]
 ```
 ***Como funciona:*** odd é uma função que verifica se um número é ímpar. filter usa odd para testar cada elemento em [1, 2, 3, 4].
 
-- foldr (fold right):
+- ***foldr (fold right):***
 
 ***O que faz:*** Combina elementos de uma lista da direita para a esquerda usando uma função.
 ***Exemplo:*** Somar os elementos de uma lista.
@@ -274,7 +282,7 @@ foldr (+) 0 [1, 2, 3] -- Resulta em 6
 ```
 ***Como funciona:*** Começa com 0 e combina cada elemento da lista usando + (soma).
 
-- foldl (fold left):
+-*** foldl (fold left):***
 
 ***O que faz:*** Semelhante a foldr, mas combina os elementos da esquerda para a direita.
 ***Exemplo:*** Subtrair os elementos de uma lista, começando do zero.
@@ -285,7 +293,7 @@ foldl (-) 0 [1, 2, 3] -- Resulta em -6
 
 ## Operações de Lista Avançadas
 
-- Compreensões de Lista:
+- ***Compreensões de Lista:***
 
 ***O que faz:*** Cria listas com base noutras listas, usando condições e transformações.
 ***Exemplo:*** Lista dos quadrados dos números pares.
@@ -294,7 +302,7 @@ foldl (-) 0 [1, 2, 3] -- Resulta em -6
 ```
 ***Como funciona:*** Para cada número x de 1 a 10, se x for par, coloca x^2 (x ao quadrado) na nova lista.
 
-- Concatenação de Listas:
+- ***Concatenação de Listas:***
 
 ***O que faz:*** Une duas listas numa.
 ***Exemplo:*** Juntar duas listas.
@@ -303,7 +311,7 @@ foldl (-) 0 [1, 2, 3] -- Resulta em -6
 ```
 ***Como funciona:*** ++ é o operador que junta duas listas.
 
-- zip:
+- ***zip:***
 
 ***O que faz:*** Cria uma lista de tuplas combinando elementos de duas listas.
 ***Exemplo:*** Emparelhar elementos de duas listas.
@@ -312,7 +320,7 @@ zip [1, 2, 3] ["one", "two", "three"] -- Resulta em [(1, "one"), (2, "two"), (3,
 ```
 ***Como funciona:*** zip pega o primeiro elemento de cada lista e faz uma tupla, depois o segundo de cada lista, e assim por diante.
 
-- unzip:
+-*** unzip:***
 
 ***O que faz:*** Separa uma lista de tuplas em duas listas.
 ***Exemplo:*** Separar uma lista de tuplas.
@@ -323,7 +331,7 @@ unzip [(1, "one"), (2, "two"), (3, "three")] -- Resulta em ([1, 2, 3], ["one", "
 
 # Funções Totais vs. Parciais
 
- - Funções Totais
+ -*** Funções Totais***
    
 ***O que são:*** São funções que têm uma resposta para qualquer entrada que lhes deres. Elas nunca "falham" ou causam erros por causa da entrada.
 
@@ -334,7 +342,7 @@ dobrar x = 2 * x
 Esta função dobrar pega `num número (x) e devolve o dobro.
 Não importa qual número lhe dês, ela sempre vai dar-te uma resposta.
 
-- Funções Parciais
+- ***Funções Parciais***
   
 ***O que são:*** São funções que podem não funcionar para algumas entradas. Para certos valores, elas podem falhar ou causar um erro.
 
@@ -346,7 +354,7 @@ Funciona bem com listas que têm pelo menos um elemento (head [1, 2, 3] dá 1), 
 
 # Tratamento de Erros
 
- - Maybe
+ - ***Maybe***
    
 ***O que é:*** Maybe é um tipo especial em Haskell que é usado para funções que podem não ter uma resposta para certas entradas.
 ***Como funciona:*** Maybe pode ser Just something (significa que tem uma resposta) ou Nothing (significa que não tem resposta).
@@ -358,7 +366,7 @@ safeHead (x:_) = Just x
 safeHead é como head, mas ao invés de falhar com listas vazias, retorna Nothing.
 Com uma lista normal, retorna Just seguido do primeiro elemento.
 
-- Either
+- ***Either***
 
 ***O que é:*** Either é usado para funções que podem ter dois tipos diferentes de resultados. Geralmente um para sucesso e outro para erro.
 ***Como funciona:*** Either pode ser Left algumaCoisa (geralmente um erro) ou Right algumaCoisa (um resultado bem-sucedido).
