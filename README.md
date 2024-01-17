@@ -58,7 +58,7 @@ Operações com Listas:
 
 - ***tail***: Esta função pega em tudo exceto no primeiro elemento da lista.
 
-***Exemplo: tail [1, 2, 3]*** resulta em [2, 3], que são todos os elementos da lista exceto o primeiro.
+***Exemplo: tail [1, 2, 3]*** resulta em ***[2, 3]***, que são todos os elementos da lista exceto o primeiro.
 
 - ***length***: Esta função conta quantos elementos existem na lista.
 
@@ -66,7 +66,7 @@ Operações com Listas:
 
 - ***reverse***: Esta função inverte a ordem dos elementos da lista.
 
-***Exemplo: reverse [1, 2, 3] ***resulta em [3, 2, 1], que é a lista [1, 2, 3] com a ordem dos elementos invertida.
+***Exemplo: reverse [1, 2, 3] ***resulta em ***[3, 2, 1]***, que é a lista ***[1, 2, 3]*** com a ordem dos elementos invertida.
 
 
 
