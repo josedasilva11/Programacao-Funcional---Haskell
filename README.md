@@ -8,7 +8,7 @@ soma a b = a + b
 ```
 Aqui, soma é o nome da função. a e b são os parâmetros (valores que passas para a função). Esta função simplesmente soma a e b.
 
-## Tipos de Dados em Haskell
+# Tipos de Dados em Haskell
 Haskell é muito específico com os tipos de dados:
 
 - **Int**: Para números inteiros. Exemplo: 5, -3, 42.
@@ -46,11 +46,11 @@ dobraNumero 4 sempre retornará 8.
 
 Funções Impuras: Podem ter resultados diferentes com os mesmos argumentos ou afetar outras partes do programa. Exemplo: uma função que lê a hora atual. Cada vez que a chamas, o resultado pode ser diferente.
 
-## Listas
+# Listas
 
 Em Haskell, uma lista é uma sequência de elementos do mesmo tipo. Imagina uma fila de pessoas, onde todas devem ser adultas, ou todas crianças. Da mesma forma, uma lista em Haskell deve ter elementos do mesmo tipo.
 
-Operações com Listas:
+## Operações com Listas:
 
 - ***head***: Esta função pega no primeiro elemento da lista.
 
@@ -66,10 +66,27 @@ Operações com Listas:
 
 - ***reverse***: Esta função inverte a ordem dos elementos da lista.
 
-***Exemplo: reverse [1, 2, 3] ***resulta em ***[3, 2, 1]***, que é a lista ***[1, 2, 3]*** com a ordem dos elementos invertida.
+***Exemplo: reverse [1, 2, 3]*** resulta em ***[3, 2, 1]***, que é a lista ***[1, 2, 3]*** com a ordem dos elementos invertida.
 
 
+# Tuplas
 
+Uma tupla é como uma caixa que pode conter uma combinação de diferentes tipos de itens. Por exemplo, podes ter uma caixa com um livro, uma maçã e uma caneta.
+
+***Exemplo de Tupla: (1, "Hello").*** Esta tupla contém dois elementos: um número (1) e um texto ("Hello").
+
+## Tipos de Dados Personalizados
+Você pode criar tipos de dados que se ajustem especificamente ao que você precisa no seu programa. É como se você estivesse inventando um novo tipo de caixa para organizar suas coisas da maneira que você quiser.
+
+Exemplo:
+
+```haskell
+data Shape = Circle Float | Rectangle Float Float
+```
+Aqui, Shape é um novo tipo de dado que criaste. Ele pode ser um Circle (Círculo) com um número a representar o raio, ou um Rectangle (Retângulo) com dois números a representar largura e altura.
+
+- ***Circle:*** Circle 5 representa um círculo com raio 5.
+- ***Rectangle:*** Rectangle 4 3 representa um retângulo com largura 4 e altura 3.
 
 
 
