@@ -321,7 +321,55 @@ unzip [(1, "one"), (2, "two"), (3, "three")] -- Resulta em ([1, 2, 3], ["one", "
 ```
 ***Como funciona:*** unzip pega cada tupla, coloca o primeiro elemento na primeira lista e o segundo na segunda.
 
+# Funções Totais vs. Parciais
 
+ - Funções Totais
+   
+***O que são:*** São funções que têm uma resposta para qualquer entrada que lhes deres. Elas nunca "falham" ou causam erros por causa da entrada.
+
+```haskell
+dobrar :: Int -> Int
+dobrar x = 2 * x
+```
+Esta função dobrar pega `num número (x) e devolve o dobro.
+Não importa qual número lhe dês, ela sempre vai dar-te uma resposta.
+
+- Funções Parciais
+  
+***O que são:*** São funções que podem não funcionar para algumas entradas. Para certos valores, elas podem falhar ou causar um erro.
+
+```haskell
+head :: [a] -> a
+head pega a primeira coisa de uma lista.
+```
+Funciona bem com listas que têm pelo menos um elemento (head [1, 2, 3] dá 1), mas falha com listas vazias (head [] causa erro).
+
+# Tratamento de Erros
+
+ - Maybe
+   
+***O que é:*** Maybe é um tipo especial em Haskell que é usado para funções que podem não ter uma resposta para certas entradas.
+***Como funciona:*** Maybe pode ser Just something (significa que tem uma resposta) ou Nothing (significa que não tem resposta).
+```haskell
+safeHead :: [a] -> Maybe a
+safeHead [] = Nothing
+safeHead (x:_) = Just x
+```
+safeHead é como head, mas ao invés de falhar com listas vazias, retorna Nothing.
+Com uma lista normal, retorna Just seguido do primeiro elemento.
+
+- Either
+
+***O que é:*** Either é usado para funções que podem ter dois tipos diferentes de resultados. Geralmente um para sucesso e outro para erro.
+***Como funciona:*** Either pode ser Left algumaCoisa (geralmente um erro) ou Right algumaCoisa (um resultado bem-sucedido).
+```haskell
+divisaoSegura :: Float -> Float -> Either String Float
+divisaoSegura _ 0 = Left "Divisão por zero."
+divisaoSegura x y = Right (x / y)
+divisaoSegura tenta dividir dois números.
+```
+Se o segundo número for 0 (o que causaria um erro na matemática), retorna Left com uma mensagem de erro.
+Se for seguro dividir, retorna Right com o resultado.
 
 
 
