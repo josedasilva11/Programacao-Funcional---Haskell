@@ -76,7 +76,7 @@ Uma tupla é como uma caixa que pode conter uma combinação de diferentes tipos
 ***Exemplo de Tupla: (1, "Hello").*** Esta tupla contém dois elementos: um número (1) e um texto ("Hello").
 
 ## Tipos de Dados Personalizados
-Você pode criar tipos de dados que se ajustem especificamente ao que você precisa no seu programa. É como se você estivesse inventando um novo tipo de caixa para organizar suas coisas da maneira que você quiser.
+Podes criar tipos de dados que se ajustem especificamente ao que precisas no teu programa. É como se estivesses a inventar um novo tipo de caixa para organizar as tuas coisas da maneira que quiseres.
 
 Exemplo:
 
@@ -89,7 +89,94 @@ Aqui, Shape é um novo tipo de dado que criaste. Ele pode ser um Circle (Círcul
 - ***Rectangle:*** Rectangle 4 3 representa um retângulo com largura 4 e altura 3.
 
 
+## Tipos Básicos
+Resumindo assim os tipos:
 
+- Int:
+
+É um número inteiro, como 5, -3, ou 42.
+Tem um tamanho fixo, o que significa que ele tem um limite para quão grande ou pequeno pode ser.
+Integer:
+
+Também é um número inteiro, mas pode ser tão grande quanto você precisar.
+Útil para cálculos com números muito grandes, como em criptografia.
+
+- Float:
+
+Representa números com casas decimais, como 3.14 ou -0.01.
+Tem precisão simples, o que é suficiente para muitos cálculos, mas não todos.
+
+- Double:
+
+Similar ao Float, mas com o dobro da precisão.
+Melhor para cálculos científicos ou quando você precisa de mais precisão.
+
+- Bool:
+
+Só pode ser True ou False.
+Usado para lógica e condições, como em testes se algo é verdadeiro ou falso.
+
+- Char:
+
+Representa um único caractere, como 'a', 'z', ou '9'.
+Usado para construir textos ou trabalhar com caracteres individuais.
+
+- String:
+
+Uma sequência de caracteres.
+Basicamente, é como uma palavra ou frase, como "Olá" ou "Haskell é legal".
+
+## Tipos Compostos
+
+- Listas:
+
+Uma coleção de elementos do mesmo tipo.
+Exemplo: [1, 2, 3] é uma lista de números inteiros.
+
+- Tuplas:
+
+Coleção de elementos de diferentes tipos.
+Exemplo: (1, "Hello", True) é uma tupla contendo um número, uma palavra e um valor booleano.
+
+## Tipos de Dados Personalizados
+
+- Tipos Algébricos de Dados (ADTs):
+Você cria seus próprios tipos.
+Exemplo: data Color = Red | Green | Blue define um tipo Color que pode ser Red, Green, ou Blue.
+
+
+## Tipos de Função
+
+- Funções:
+As funções em Haskell também são um tipo.
+Exemplo: Uma função que soma dois números (soma x y = x + y) tem tipo Int -> Int -> Int.
+
+## Tipos Especiais
+
+- Maybe:
+
+Representa um valor que pode existir ou não.
+Exemplo: Maybe Int pode ser Just 5 (existe um número) ou Nothing (não existe número).
+
+- Either:
+
+Representa um valor que pode ser de um de dois tipos.
+Exemplo: Either String Int pode ser Left "erro" (um erro com uma mensagem) ou Right 42 (um número inteiro válido).
+## Tipos Parametrizados e Polimórficos
+
+- Tipos Parametrizados:
+São tipos que funcionam com vários outros tipos.
+Exemplo: A lista [a] pode ser uma lista de qualquer coisa (a é o parâmetro que pode ser qualquer tipo).
+
+## Tipos de Restrição de Classe
+- Restrições de Classe:
+Algumas funções só funcionam com tipos que têm certas propriedades.
+Exemplo: Para comparar dois valores com ==, eles precisam ser do tipo Eq.
+
+## Tipos de Função de Ordem Superior
+- Funções de Ordem Superior:
+São funções que podem receber outras funções como argumentos ou retornar outras funções.
+Exemplo: map é uma função que recebe uma função e uma lista, e aplica essa função a cada elemento da lista.
 
 
 
