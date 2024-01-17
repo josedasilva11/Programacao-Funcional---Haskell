@@ -55,12 +55,15 @@ Operações com Listas:
 ***head***: Esta função pega no primeiro elemento da lista.
 
 Exemplo: head [1, 2, 3] resulta em 1, porque 1 é o primeiro elemento da lista [1, 2, 3].
+
 ***tail***: Esta função pega em tudo exceto no primeiro elemento da lista.
 
 Exemplo: tail [1, 2, 3] resulta em [2, 3], que são todos os elementos da lista exceto o primeiro.
+
 ***length***: Esta função conta quantos elementos existem na lista.
 
 Exemplo: length [1, 2, 3] resulta em 3, porque há três elementos na lista [1, 2, 3].
+
 ***reverse***: Esta função inverte a ordem dos elementos da lista.
 
 Exemplo: reverse [1, 2, 3] resulta em [3, 2, 1], que é a lista [1, 2, 3] com a ordem dos elementos invertida.
