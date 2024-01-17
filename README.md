@@ -1,3 +1,5 @@
+Material de Apoio à UC de Programção Funcional da Universidade do Minho.
+
 # Sumário
 
 - [Sintaxe Básica de Haskell](#sintaxe-básica-de-haskell)
@@ -21,7 +23,7 @@
 
 
 # Sintaxe Básica de Haskell
-Imagine que Haskell é uma linguagem onde dás instruções ao computador de maneira diferente do que estás acostumado noutras linguagens como Python ou Java.
+Imagina que Haskell é uma linguagem onde dás instruções ao computador de maneira diferente do que estás acostumado noutras linguagens como Python ou Java.
 
 Exemplo de Função:
 
